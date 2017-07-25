@@ -9,11 +9,6 @@ var tramosAp = document.getElementById('tramos');
 var checkboxes = document.getElementsByClassName('checkbox-materia');
 
 
-//
-// function updateValue(e) {
-//   materiasAp.innerHTML = e.value;
-// }
-
 for (i = 0; i < materias.length; i++) {
   nombreMateria = materias[i].materia;
   idMateria = materias[i].id;
@@ -124,33 +119,50 @@ function materiasCursadas() {
 
 checkbox();
 
+//Kpis
+kpiAprobadas = document.getElementById('kpi-aprobadas');
+kpiAvance = document.getElementById('kpi-avance');
+kpiRestante = document.getElementById('kpi-restante');
 
-// Funcion para determinar posicion
-function getPosition(el) {
-  var xPos = 0;
-  var yPos = 0;
-
-  while (el) {
-    if (el.tagName == "BODY") {
-      // deal with browser quirks with body/window/document and page scroll
-      var xScroll = el.scrollLeft || document.documentElement.scrollLeft;
-      var yScroll = el.scrollTop || document.documentElement.scrollTop;
-
-      xPos += (el.offsetLeft - xScroll + el.clientLeft);
-      yPos += (el.offsetTop - yScroll + el.clientTop);
-    } else {
-      // for all other non-BODY elements
-      xPos += (el.offsetLeft - el.scrollLeft + el.clientLeft);
-      yPos += (el.offsetTop - el.scrollTop + el.clientTop);
-    }
-
-    el = el.offsetParent;
-  }
-  return {
-    x: xPos,
-    y: yPos
-  };
+function kpis() {
+  kpiAprobadas.innerHTML = materiasAp.length - 1;
+  restantes = (materias.length - (materiasAp.length - 1));
+  avance = (materiasAp.length - 1) / materias.length * 100;
+  kpiAvance.innerHTML = avance.toFixed(2) + "%" ;
+  kpiRestante.innerHTML = restantes;
 }
+
+kpis();
+document.addEventListener('click', kpis);
+
+//
+// // Funcion para determinar posicion
+// function getPosition(el) {
+//   var xPos = 0;
+//   var yPos = 0;
+//
+//   while (el) {
+//     if (el.tagName == "BODY") {
+//       // deal with browser quirks with body/window/document and page scroll
+//       var xScroll = el.scrollLeft || document.documentElement.scrollLeft;
+//       var yScroll = el.scrollTop || document.documentElement.scrollTop;
+//
+//       xPos += (el.offsetLeft - xScroll + el.clientLeft);
+//       yPos += (el.offsetTop - yScroll + el.clientTop);
+//     } else {
+//       // for all other non-BODY elements
+//       xPos += (el.offsetLeft - el.scrollLeft + el.clientLeft);
+//       yPos += (el.offsetTop - el.scrollTop + el.clientTop);
+//     }
+//
+//     el = el.offsetParent;
+//   }
+//   return {
+//     x: xPos,
+//     y: yPos
+//   };
+// }
+
 
 //
 // function getPosition(el) {

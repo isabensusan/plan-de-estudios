@@ -297,8 +297,8 @@ var materias = [
         "correlativa": ["0"]
     },
     {
-        "id": "715",
-        "materia": "Inteligencia de Negocios",
+        "id": "***",
+        "materia": "Optativa",
         "depto": "S",
         "vh": "4",
         "requisitos": [""],

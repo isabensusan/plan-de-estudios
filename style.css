@@ -1,7 +1,11 @@
 body {
   font-family: 'Roboto';
   font-size: 14px;
-  padding: 15px;
+  /*padding: 15px;*/
+  box-sizing: border-box;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
 }
 
 .checkbox-materia {
@@ -9,12 +13,45 @@ body {
     position: absolute;
 }
 
+.sidebar {
+  padding: 1%;
+  display: block;
+  float: left;
+  width: 12%;
+  background-color: #1c273b;
+  color: white;
+  height: 100%;
+  box-sizing: border-box;
+  box-shadow: 0 2px 5px rgba(0,0,0,.26)
+}
+
+.sidebar h5, .sidebar h3 {
+  margin: 0;
+}
+
+.kpi-wrapper h3 {
+    font-size: 1.8em;
+}
+
+.kpi-wrapper {
+  margin-bottom: 20px;
+}
+
+
+.materias-container {
+  max-height: 100%;
+  width: 88%;
+  margin-left: 12%;
+  padding: 15px;
+}
+
 #input-container {
     flex-direction: column;
-    height: 100vh;
     flex-wrap: wrap;
     justify-content: flex-start;
     display: flex;
+    max-height: 100vh;
+
 }
 
 .checkbox-wrapper {
@@ -51,4 +88,40 @@ body {
 .cursada {
   text-decoration: line-through;
   color: gray;
+}
+
+@media (max-width: 500px) {
+  body {
+    overflow: visible;
+  }
+
+  .kpi-wrapper {
+      display: inline-block;
+      margin: 0px 2%;
+    }
+
+  .sidebar {
+    float: none;
+    width: 100%;
+    height: 10%;
+    padding: 15px;
+    text-align: center;
+  }
+
+  .materias-container {
+    float: none;
+    margin-left: auto;
+    max-height: 100%;
+  }
+
+  #input-container {
+    max-height: 100%;
+    flex-direction: row;
+    max-width: 100vw;
+  }
+
+  .checkbox-wrapper {
+    margin: 2% 4%;
+  }
+
 }
