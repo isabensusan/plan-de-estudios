@@ -1,0 +1,54 @@
+body {
+  font-family: 'Roboto';
+  font-size: 14px;
+  padding: 15px;
+}
+
+.checkbox-materia {
+    /*float: left;*/
+    position: absolute;
+}
+
+#input-container {
+    flex-direction: column;
+    height: 100vh;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    display: flex;
+}
+
+.checkbox-wrapper {
+  width: 130px;
+  height: 80px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  margin: 5px 20px;
+  display: inline-flex;
+  text-align: center;
+  position: relative;
+  padding: 10px;
+
+}
+
+.checkbox-wrapper h4 {
+  width: 100%;
+  align-self: center;
+  font-size: 13px;
+  margin-bottom: 1em;
+}
+
+.checkbox-wrapper p {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 10px;
+  font-size: 13px;
+}
+
+.cursable {
+  color: rgb(3,230,160);
+}
+
+.cursada {
+  text-decoration: line-through;
+  color: gray;
+}
