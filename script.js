@@ -135,6 +135,25 @@ function kpis() {
 kpis();
 document.addEventListener('click', kpis);
 
+// function correlativasColor() {
+//   for(k=0; k < materias.length; k++) {
+//     for(j=0; j < materias[k].correlativa.length; j++) {
+//       idCo = materias[k].correlativa[j];
+//         if(idCo > 0 ) {
+//           idTarget = document.getElementById(idCo);
+//           idTarget.className += "correlativa"
+//       }
+//     }
+//   }
+// }
+//
+// function arbolCorrelativas() {
+//   for(i=0; i < uiMaterias.length; i++) {
+//       uiMaterias[i].addEventListener('click', correlativasColor)
+//   }
+// }
+//
+// arbolCorrelativas();
 //
 // // Funcion para determinar posicion
 // function getPosition(el) {

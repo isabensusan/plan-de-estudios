@@ -25,6 +25,13 @@ body {
   box-shadow: 0 2px 5px rgba(0,0,0,.26)
 }
 
+.sidebar img {
+  filter: invert(100%);
+  width: 100%;
+  margin-bottom: 10%;
+  padding-bottom: 15px;
+}
+
 .sidebar h5, .sidebar h3 {
   margin: 0;
 }
@@ -37,6 +44,9 @@ body {
   margin-bottom: 20px;
 }
 
+.correlativa {
+  background-color: red !important;
+}
 
 .materias-container {
   max-height: 100%;
@@ -106,6 +116,10 @@ body {
     height: 10%;
     padding: 15px;
     text-align: center;
+  }
+
+  .sidebar img {
+    display: none;
   }
 
   .materias-container {
