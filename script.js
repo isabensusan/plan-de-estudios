@@ -1,3 +1,6 @@
+// var selectMateria = document.getElementById('select-materia');
+// var selected = selectMateria.options[selectMateria.selectedIndex].value;
+
 var inputBox = document.getElementById('input-box');
 var textoMateriasAp = document.getElementById('materias-aprobadas');
 var inputContainer = document.getElementById('input-container');
@@ -8,39 +11,52 @@ var uiMaterias = document.getElementsByClassName('checkbox-wrapper');
 var tramosAp = document.getElementById('tramos');
 var checkboxes = document.getElementsByClassName('checkbox-materia');
 
+// 
+// function dataSelect() {
+//   if(selected == 'admin') {
+//     materias = materiasAdmin;
+//   }
+//   else {
+//     materias = materiasSis;
+//   }
+//   //checkbox();
+// }
+// dataSelect();
 
-for (i = 0; i < materias.length; i++) {
-  nombreMateria = materias[i].materia;
-  idMateria = materias[i].id;
+function drawBoxes() {
+  for (i = 0; i < materias.length; i++) {
+      nombreMateria = materias[i].materia;
+      idMateria = materias[i].id;
 
-  var checkboxWrap= document.createElement("div");
-  checkboxWrap.className = "checkbox-wrapper";
-  checkboxWrap.id = materias[i].id;
-  checkboxWrap.style.order = materias[i].orden;
+      checkboxWrap= document.createElement("div");
+      checkboxWrap.className = "checkbox-wrapper";
+      checkboxWrap.id = materias[i].id;
+      checkboxWrap.style.order = materias[i].orden;
 
-  var objetoInput = document.createElement("input");
-  objetoInput.type = 'checkbox';
-  objetoInput.className = 'checkbox-materia';
-  objetoInput.value = idMateria;
+      objetoInput = document.createElement("input");
+      objetoInput.type = 'checkbox';
+      objetoInput.className = 'checkbox-materia';
+      objetoInput.value = idMateria;
 
-  var textoInput = document.createElement("h4");
-  textoInput.innerHTML = nombreMateria;
+      textoInput = document.createElement("h4");
+      textoInput.innerHTML = nombreMateria;
 
-  var textoIdMateria = document.createElement("p");
-  textoIdMateria.innerHTML = idMateria;
+      textoIdMateria = document.createElement("p");
+      textoIdMateria.innerHTML = idMateria;
 
-  inputContainer.appendChild(checkboxWrap);
-  checkboxWrap.appendChild(objetoInput);
-  checkboxWrap.appendChild(textoInput);
-  checkboxWrap.appendChild(textoIdMateria);
+      inputContainer.appendChild(checkboxWrap);
+      checkboxWrap.appendChild(objetoInput);
+      checkboxWrap.appendChild(textoInput);
+      checkboxWrap.appendChild(textoIdMateria);
 
-  // divMaterias = document.createElement("div");
-  // materiasContainer.appendChild(divMaterias);
-  // divMaterias.innerHTML = nombreMateria;
-  // divMaterias.className = "ui-materias";
+      // divMaterias = document.createElement("div");
+      // materiasContainer.appendChild(divMaterias);
+      // divMaterias.innerHTML = nombreMateria;
+      // divMaterias.className = "ui-materias";
 
+  }
 }
-
+drawBoxes();
 
 function checkbox(){
   materiasAp = ["0"];
@@ -134,6 +150,13 @@ function kpis() {
 
 kpis();
 document.addEventListener('click', kpis);
+
+// function refreshData() {
+//   dataSelect();
+//   drawBoxes();
+//   checkbox();
+// }
+// selectMateria.addEventListener('click', refreshData);
 
 // function correlativasColor() {
 //   for(k=0; k < materias.length; k++) {

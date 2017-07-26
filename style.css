@@ -110,6 +110,10 @@ body {
       margin: 0px 2%;
     }
 
+  .kpi-wrapper h3{
+    font-size: 1.3em;
+  }
+
   .sidebar {
     float: none;
     width: 100%;
@@ -120,6 +124,8 @@ body {
 
   .sidebar img {
     display: none;
+    position: fixed;
+    z-index: 10;
   }
 
   .materias-container {
@@ -135,7 +141,17 @@ body {
   }
 
   .checkbox-wrapper {
-    margin: 2% 4%;
+    margin: 1% auto;
+    padding: 1%;
   }
+}
 
+@media (max-width: 350px) {
+    .sidebar {
+      padding: 3%;
+    }
+
+    .sidebar h5 {
+      font-size: 0.7em;
+    }
 }
